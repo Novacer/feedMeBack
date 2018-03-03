@@ -15,8 +15,9 @@ mongoose.connection.on('error', function(err){
 	console.log(err);
 });
 
-
 var app = express();
+app.use(cors());
+app.use(bodyParser.json());
 
 var users = require('./routes/users');
 
@@ -24,8 +25,6 @@ app.use('/users', users);
 
 var port = process.env.PORT || 8080;
 
-app.use(cors());
-app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 

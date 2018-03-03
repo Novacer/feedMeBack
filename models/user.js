@@ -7,16 +7,14 @@ var userSchema = new mongoose.Schema({
 	products: {type: Array, default: []}
 });
 
-var User = mongoose.model('User', userSchema);
+var User = module.exports = mongoose.model('User', userSchema);
 
-module.exports.getUserByName = function(name, next) {
-	var query = {username: name};
+module.exports.getUserByName = function(email, next) {
+	var query = {email: email};
 	User.findOne(query, next);
 };
 
 module.exports.addUser = function(newUser, next){
-	newUser.save(function (err){
-		if(err) throw err;
-	});
+	newUser.save(next);
 };
 
