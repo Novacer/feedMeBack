@@ -4,7 +4,8 @@ var userSchema = new mongoose.Schema({
 	email: {type: String},
 	password: {type: String},
 	companyName: {type: String},
-	products: {type: Array, default: []}
+	products: {type: Array, default: []},
+	feedback: {type: Array, default: []}
 });
 
 var User = module.exports = mongoose.model('User', userSchema);
@@ -17,4 +18,3 @@ module.exports.getUserByName = function(email, next) {
 module.exports.addUser = function(newUser, next){
 	newUser.save(next);
 };
-

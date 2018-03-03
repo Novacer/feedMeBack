@@ -3,12 +3,13 @@ var router =  express.Router();
 var User = require('../models/user');
 
 router.post('/register', function(req, res, next){
-	
+
 	let newUser = new User({
 		email: req.body.email,
 		password: req.body.password,
 		companyName: req.body.companyName,
-		products: req.body.products
+		products: req.body.products,
+		feedback: []
 	});
 
 	User.addUser(newUser, function(err, user){
