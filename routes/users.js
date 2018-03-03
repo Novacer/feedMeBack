@@ -39,4 +39,10 @@ router.post('/login', function(req, res, next){
 	});
 });
 
+router.post('/feedback', function(req, res, next) {
+	// to be implemented once feedback form is finalized
+	res.json({msg: "not yet implemented"});
+
+});
+
 module.exports = router;
