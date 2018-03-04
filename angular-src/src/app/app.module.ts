@@ -10,7 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 
 const appRoutes : Routes = [
-  {path: "", HomeComponent}
+  {path: "", component: HomeComponent}
 ];
 
 @NgModule({
