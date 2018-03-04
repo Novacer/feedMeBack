@@ -53,4 +53,8 @@ router.post('/feedback', function(req, res, next) {
 	});
 });
 
+router.post('/config', function(req, res, next){
+	
+})
+
 module.exports = router;
