@@ -17,6 +17,8 @@ mongoose.connection.on('error', function(err){
 
 var app = express();
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 var users = require('./routes/users');
@@ -25,8 +27,9 @@ app.use('/users', users);
 
 var port = process.env.PORT || 8080;
 
-
-app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', function(request, response) {
+  response.send("Hello World");
+});
 
 app.get('/*', function(req, res){
 	res.sendFile(__dirname + '/public/index.html');

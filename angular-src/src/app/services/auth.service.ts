@@ -14,7 +14,7 @@ export class AuthService {
   registerUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post("users/register", user, {headers: headers})
+    return this.http.post("https://feed-me-back.herokuapp.com:443/users/register", user, {headers: headers})
       .map(resp => resp.json());
   }
 
@@ -22,7 +22,7 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
-    return this.http.post("users/login", user, {headers: headers})
+    return this.http.post("https://feed-me-back.herokuapp.com:443/users/login", user, {headers: headers})
       .map(resp => resp.json());
   }
 
@@ -32,7 +32,7 @@ export class AuthService {
 
     let body = {email: email, feedback: feedback};
 
-    return this.http.post("users/feedback", body, {headers: headers})
+    return this.http.post("https://feed-me-back.herokuapp.com:443/users/feedback", body, {headers: headers})
       .map(resp => resp.json());
 
   }
