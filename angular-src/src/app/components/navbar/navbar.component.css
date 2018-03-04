@@ -3,16 +3,41 @@ nav {
 }
 
 li {
-    margin: 12px;
+    margin: 20px;
 }
 
 .btnColor {
-    background-color: #ff9600;
+    background-color: rgba(255,255,255,0);
+    border-color: #ff9600;
+    border-radius: 1px;
+    border-width: 1px;
+    color: #ff9600;
 }
 
+.btnColor:hover {
+    -webkit-transition: background-color 0.2s;
+    background-color: rgba(255,200,125,0.2);
+    border-color: #ff9600;
+    border-radius: 1px;
+    border-width: 1px;
+    color: #ff9600;
+}
 
 .sgnColor {
-    background-color: #ffe500;
+    background-color: rgba(255,255,255,0);
+    border-color: #01c681;
+    border-radius: 1px;
+    border-width: 1px;
+    color: #01c681;
+}
+
+.sgnColor:hover {
+    -webkit-transition: background-color 0.2s;
+    background-color: rgba(210,255,190,0.35);
+    border-color: #01c681;
+    border-radius: 1px;
+    border-width: 1px;
+    color: #01c681;
 }
 
 .my-color{
