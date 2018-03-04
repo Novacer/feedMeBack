@@ -17,7 +17,8 @@ import { ConfigComponent } from './components/config/config.component';
 const appRoutes : Routes = [
   {path: "", component: HomeComponent},
   {path: "register", component: RegisterComponent},
-  {path: "login", component: LoginComponent}
+  {path: "login", component: LoginComponent},
+  {path: "config", component: ConfigComponent}
 ];
 
 @NgModule({
