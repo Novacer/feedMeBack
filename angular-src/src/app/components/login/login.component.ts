@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
   loginFail: boolean;
 
   constructor(private router: Router, private authService: AuthService) {
-    this.email = "";
-    this.password = "";
+    this.email = "will@mail.com";
+    this.password = "12345";
     this.loginFail = false;
  }
 
@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
         if (data.success) {
           let response_user = data.user;
           this.loginFail = false;
+          localStorage.clear();
           localStorage.setItem("user", JSON.stringify(response_user));
 
           this.router.navigateByUrl('');
