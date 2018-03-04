@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ConfigComponent } from './components/config/config.component';
 import { ViewComponent } from './components/view/view.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
 
 const appRoutes : Routes = [
   {path: "", component: HomeComponent},
@@ -23,6 +24,7 @@ const appRoutes : Routes = [
   {path: "config", component: ConfigComponent},
   {path: "view", component: ViewComponent},
   {path: "profile", component: ProfileComponent},
+  {path: "aboutus", component: AboutusComponent},
   {path: "**", component: HomeComponent}
 ];
 
@@ -35,7 +37,8 @@ const appRoutes : Routes = [
     LoginComponent,
     ConfigComponent,
     ViewComponent,
-    ProfileComponent
+    ProfileComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,

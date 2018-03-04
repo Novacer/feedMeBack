@@ -10,12 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "*",
-    "mongoose": "*",
-    "body-parser": "*",
     "bcryptjs": "*",
+    "body-parser": "*",
     "cors": "*",
+    "express": "*",
     "jsonwebtoken": "*",
+    "mongoose": "*",
     "passport": "*",
     "passport-jwt": "*"
   },
