@@ -2,6 +2,19 @@ nav {
   display:block;
 }
 
+li {
+    margin: 12px;
+}
+
+.btnColor {
+    background-color: #ff9600;
+}
+
+
+.sgnColor {
+    background-color: #ffe500;
+}
+
 .my-color{
   background: linear-gradient(top, white,#f2f9f9);
 }
