@@ -5,7 +5,7 @@ var mongoose = require("mongoose");
 var cors = require("cors");
 var passport = require("passport");
 
-mongoose.connect('mongodb://weiminloh:12345@ds153958.mlab.com:53958/feedbackusers');
+mongoose.connect('mongodb://weiminloh:12345@ds231568.mlab.com:31568/my_users');
 
 mongoose.connection.on('connected', function(){
 	console.log("Connected to database");
