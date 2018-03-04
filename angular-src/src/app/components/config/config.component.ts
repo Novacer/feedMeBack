@@ -20,7 +20,7 @@ export class ConfigComponent implements OnInit {
     this.user = JSON.parse(localStorage.getItem('user'));
     var email = this.user.email;
 
-    this.image_link = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + email;
+    this.image_link = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + "Subway Customer Feedback Survey";
   }
 
   onGenerateClick() {
