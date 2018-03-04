@@ -56,4 +56,27 @@ router.post('/feedback', function(req, res, next) {
 	});
 });
 
+router.post('/get-questions', function(req, res, next) {
+	var email = req.body.email;
+
+	User.getUserByName(email, function(err, user) {
+		if (err) throw err;
+
+		if (!user) {
+			res.json({success: false, msg: "could not find user"});
+		}
+		else {
+			var productArray = user.products;
+			var questionArray = [];
+
+			for (var i = 0; i < productArray.length; i++) {
+				var question = "Please rate " + productArray[i] + " from 1 to 10.";
+				questionArray.push(question);
+			}
+
+			res.json({success: true, questions: questionArray, products: productArray});
+		}
+	});
+});
+
 module.exports = router;
