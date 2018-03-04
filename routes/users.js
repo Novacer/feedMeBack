@@ -41,8 +41,16 @@ router.post('/login', function(req, res, next){
 
 router.post('/feedback', function(req, res, next) {
 	// to be implemented once feedback form is finalized
-	res.json({msg: "not yet implemented"});
+	var email = req.body.email;
+	var newFeedback = req.body.feedback;
 
+	User.updateFeedback(email, newFeedback, function(err, user) {
+		if (err) throw err;
+
+		else {
+			res.json({success: true, user: user});
+		}
+	});
 });
 
 module.exports = router;

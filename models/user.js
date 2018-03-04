@@ -18,3 +18,11 @@ module.exports.getUserByName = function(email, next) {
 module.exports.addUser = function(newUser, next){
 	newUser.save(next);
 };
+
+module.exports.updateFeedback = function(email, newFeedback, next) {
+	var query = {email: email};
+	var update = {feedback: newFeedback};
+
+																			 // returns new updated user
+	User.findOneAndUpdate(query, update, {new: true}, next);
+};
