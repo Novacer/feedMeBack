@@ -2,5 +2,11 @@
 	<div>
 		<h1>Configure surveys for products</h1>
 	</div>
-	
+
+	<div *ngIf="user">
+		<ul *ngFor="let product of user.products; let i = index">
+			<li>{{product}}</li>
+		</ul>
+	</div>
+
 </div>
