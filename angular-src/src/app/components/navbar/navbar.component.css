@@ -119,14 +119,11 @@ li {
   text-align: center;
 }
 
-.mr-auto,
-
-.mx-auto {
+.mr-auto {
   margin-right: auto !important;
 }
 
-.ml-auto,
-
-.mx-auto {
+.ml-auto {
   margin-left: auto !important;
+  align-content: 
 }
