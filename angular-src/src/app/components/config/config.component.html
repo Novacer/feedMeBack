@@ -15,4 +15,11 @@
 		<br>
 		<button type="submit" class="btn btnColor">Save</button>
 	</div>
+	<div>
+		<br>
+		<p>Generate QR Code!</p>
+		<button type="submit" class="btn btnColor" (click)="onGenerateClick()">Generate!</button>
+		<br/> <br/>
+		<img src="{{image_link}}" *ngIf="show_qr">
+	</div>
 </div>
