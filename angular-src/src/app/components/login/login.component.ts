@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
   loginFail: boolean;
 
   constructor(private router: Router, private authService: AuthService) {
-    this.email = "will@mail.com";
-    this.password = "12345";
+    this.email = "";
+    this.password = "";
     this.loginFail = false;
  }
 
