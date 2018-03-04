@@ -29,15 +29,15 @@ export class LoginComponent implements OnInit {
     }
 
     else {
-      let user = {email: this.email, password: this.password};
+      this.user = {email: this.email, password: this.password};
 
-      this.authService.loginUser(user).subscribe(data => {
+      this.authService.loginUser(this.user).subscribe(data => {
         if (data.success) {
           let response_user = data.user;
           this.loginFail = false;
           localStorage.setItem("user", JSON.stringify(response_user));
 
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('');
         }
         else {
           this.loginFail = true;
