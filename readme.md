@@ -58,3 +58,18 @@ response: {
   "rating": "number[]"
 }
 ```
+### POST - "/get-questions"
+Sends a response to the mobile side.
+
+--------
+```JSON
+parameters: {
+  "email": "string",
+}
+
+response: {
+  "success": "boolean",
+  "questions": "string[]",
+  "products": "string[]"
+}
+```
