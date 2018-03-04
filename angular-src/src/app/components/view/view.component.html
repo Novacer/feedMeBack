@@ -2,5 +2,11 @@
 	<div>
 		<h1>View surveys completed by customers</h1>
 	</div>
-	
+	<div *ngIf="user">
+		<div *ngFor="let feed of feedback">
+			<ul *ngFor="let rating of feed.rating; let i = index">
+				<li *ngIf="rating != -1">{{feed.products[i]}} : {{rating}}</li>
+			</ul>
+		</div>
+	</div>
 </div>
