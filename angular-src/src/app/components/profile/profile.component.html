@@ -1,3 +1,10 @@
-<p>
-  profile works!
-</p>
+<div  class="jumbotron text-center">
+	<img src="https://my.mixtape.moe/bdkazl.png" width="200" height="289">
+	<p>Tesla Inc.</p>
+
+
+	<a href="/"><button type="button" class="btn sgnColor" *ngIf="authService.loggedIn()" (click)="authService.logout()">Logout</button></a>
+
+
+</div>
+

@@ -1,0 +1,16 @@
+.sgnColor {
+    background-color: rgba(255,255,255,0);
+    border-color: #01c681;
+    border-radius: 1px;
+    border-width: 1px;
+    color: #01c681;
+}
+
+.sgnColor:hover {
+    -webkit-transition: background-color 0.2s;
+    background-color: rgba(210,255,190,0.35);
+    border-color: #01c681;
+    border-radius: 1px;
+    border-width: 1px;
+    color: #01c681;
+}
