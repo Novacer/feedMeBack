@@ -17,11 +17,15 @@
         </ul>
           <ul class="navbar-nav">
             <li class="mr-auto">
-                <a href="/login"> <input type="image" src= "https://my.mixtape.moe/xvocqg.png" style="height: 30px; width:30px;" name="Login"/> </a>
+                <a href="/login"> <input type="image" src= "https://my.mixtape.moe/xvocqg.png" style="height: 30px; width:30px;" name="Login" *ngIf="!authService.loggedIn()"/> </a>
             </li>
 
             <li class="mr-auto">
-            	<a href="/register"><button type="button" class="btn sgnColor float-right">Register</button></a>
+            	<a href="/register"><button type="button" class="btn sgnColor float-right" *ngIf="!authService.loggedIn()">Register</button></a>
+            </li>
+
+            <li class="mr-auto">
+            	<a href="/register"><button type="button" class="btn sgnColor float-right" *ngIf="authService.loggedIn()">Logout</button></a>
             </li>
         </ul>
     </nav>

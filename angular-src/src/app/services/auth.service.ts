@@ -36,4 +36,19 @@ export class AuthService {
       .map(resp => resp.json());
 
   }
+
+  loggedIn() {
+    let user = localStorage.getItem('user');
+
+    if (user != null) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  logout() {
+    localStorage.clear();
+  }
 }
