@@ -47,6 +47,9 @@ router.post('/feedback', function(req, res, next) {
 	User.updateFeedback(email, newFeedback, function(err, user) {
 		if (err) throw err;
 
+		else if (!user) {
+			res.json({success: false, msg: "Error!"});
+		}
 		else {
 			res.json({success: true, user: user});
 		}

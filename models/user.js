@@ -21,8 +21,15 @@ module.exports.addUser = function(newUser, next){
 
 module.exports.updateFeedback = function(email, newFeedback, next) {
 	var query = {email: email};
-	var update = {feedback: newFeedback};
-
 																			 // returns new updated user
-	User.findOneAndUpdate(query, update, {new: true}, next);
+	User.findOne(query, (err, user) => {
+		if (err) throw err;
+		else if (!user) {
+			res.json({success: false, msg: "no user!"});
+		}
+		else {
+			user.feedback.push(newFeedback);
+			user.save(next);
+		}
+	});
 };
