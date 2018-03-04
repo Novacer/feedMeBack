@@ -2,8 +2,8 @@
 	<div>
 		<h1>Sign up with FeedMeFeedback!</h1>
 	</div>
-	<br>Email address: <input type="text" name=""/><br>
-	<br>Password: <input type="password" name="Password"/><br>
-	<br><input type="submit" name="">
+	<br>Company Name: <input type="text" name="companyName" [(ngModel)]="companyName"/><br>
+	<br>Email address: <input type="text" name="email" [(ngModel)]="email"/><br>
+	<br>Password: <input type="password" name="password" [(ngModel)]="password"/><br>
+	<br><input type="submit" (click)="onRegisterSubmit()">
 </div>
-
