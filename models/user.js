@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
 
+
+// define user schema; set the "form" of the data
 var userSchema = new mongoose.Schema({
 	email: {type: String},
 	password: {type: String},
@@ -8,17 +10,21 @@ var userSchema = new mongoose.Schema({
 	feedback: {type: Array, default: []}
 });
 
+// export user IMPORTANT!
 var User = module.exports = mongoose.model('User', userSchema);
 
+// async query for user by name
 module.exports.getUserByName = function(email, next) {
 	var query = {email: email};
 	User.findOne(query, next);
 };
 
+// async save user to mongodb
 module.exports.addUser = function(newUser, next){
 	newUser.save(next);
 };
 
+// async mutate feedback field in user document
 module.exports.updateFeedback = function(email, newFeedback, next) {
 	var query = {email: email};
 																			 // returns new updated user

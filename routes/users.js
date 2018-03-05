@@ -2,6 +2,7 @@ var express = require("express");
 var router =  express.Router();
 var User = require('../models/user');
 
+// register the user
 router.post('/register', function(req, res, next){
 
 	let newUser = new User({
@@ -21,6 +22,7 @@ router.post('/register', function(req, res, next){
 	});
 });
 
+// authenticate user login
 router.post('/login', function(req, res, next){
 	var email = req.body.email;
 	var password = req.body.password;
@@ -39,6 +41,7 @@ router.post('/login', function(req, res, next){
 	});
 });
 
+// mutate the user's feedback array
 router.post('/feedback', function(req, res, next) {
 	// to be implemented once feedback form is finalized
 	var email = req.body.email;
@@ -56,6 +59,7 @@ router.post('/feedback', function(req, res, next) {
 	});
 });
 
+// generate a list of questions for the mobile client
 router.post('/get-questions', function(req, res, next) {
 	var email = req.body.email;
 
@@ -79,4 +83,5 @@ router.post('/get-questions', function(req, res, next) {
 	});
 });
 
+// export the router IMPORTANT!
 module.exports = router;
