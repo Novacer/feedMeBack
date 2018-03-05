@@ -11,6 +11,7 @@ export class AuthService {
 
   }
 
+  // registerUser(Object) registers the new user to mongodb
   registerUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -18,6 +19,7 @@ export class AuthService {
       .map(resp => resp.json());
   }
 
+  // loginUser(Object) authenticates that user's email and password are in mongodb
   loginUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -26,6 +28,8 @@ export class AuthService {
       .map(resp => resp.json());
   }
 
+  // updateFeedback(string, Object) finds the user with email and appends the new feedback to
+  //   the user's feedback array
   updateFeedback(email, feedback) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -37,6 +41,7 @@ export class AuthService {
 
   }
 
+  // loggedIn() returns true if there exists a user in the localStorage, false otherwise.
   loggedIn() {
     let user = localStorage.getItem('user');
 
@@ -48,6 +53,7 @@ export class AuthService {
     }
   }
 
+  // logout() clears the local storage
   logout() {
     localStorage.clear();
   }
